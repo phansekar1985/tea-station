@@ -1,0 +1,71 @@
+.products {
+	background: var(--color-grey-light);
+	padding: 2rem 0;
+
+	&-info {
+		@media screen and (min-width: 1200px) {
+			float: left;
+			width: 30%;
+		}
+	}
+
+	&-inventory {
+		@media screen and (min-width: 1200px) {
+			float: left;
+			width: 70%;
+		}
+	}
+
+	.product {
+		&-title {
+			margin-top: 1rem;
+		}
+
+		&-img {
+			border-radius: var(--radius);
+			margin-bottom: 2rem;
+			height: 17rem;
+			object-fit: cover;
+			object-position: center left;
+		}
+
+		&-price {
+			color: var(--primary-color);
+			margin-bottom: 2rem;
+		}
+
+		&-text {
+			color: var(--color-grey-lighter);
+		}
+
+		float: left;
+		width: 100%;
+
+		@media screen and (min-width: 768px) {
+			width: 50%;
+			padding: 0 0.5rem;
+
+			&-text {
+				max-width: 100%;
+			}
+
+			&-img {
+				object-position: left center;
+			}
+		}
+
+		@media screen and (min-width: 992px) {
+			width: 33.3%;
+		}
+
+		@media screen and (min-width: 1200px) {
+			&-text {
+				max-width: 20rem;
+			}
+
+			&-img {
+				object-position: center center;
+			}
+		}
+	}
+}

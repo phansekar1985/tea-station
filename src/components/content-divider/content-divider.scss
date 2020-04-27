@@ -1,0 +1,9 @@
+.content-divider {
+	height: 0.5rem;
+	background: linear-gradient(
+		to right,
+		var(--primary-color),
+		yellow,
+		var(--primary-color)
+	)
+}

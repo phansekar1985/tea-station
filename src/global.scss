@@ -1,0 +1,124 @@
+// Fonts
+@import url("https://fonts.googleapis.com/css?family=Catamaran:400,700|Grand+Hotel");
+
+// Global Variable
+:root {
+	--primary-color: #678e3e;
+	--primary-light-color: #beed8c;
+	--color-grey-dark: #505050;
+	--color-grey-lighter: grey;
+	--color-grey-light: #D3D3D3;
+	--color-white: #ffff;
+	--font-family-primary: "Catamaran", sans-serif;
+	--font-family-secondary: "Grand Hotel", cursive;
+	--transition: all 0.5s linear;
+	--letter-spacing: 0.25rem;
+	--radius: 0.5rem;
+}
+
+// universal styles
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+// Root style
+body {
+	font-family: var(--font-family-primary);
+	background: var(--color-white);
+	line-height: 1.5;
+	font-size: 0.875rem;
+
+	a {
+		text-decoration: none;
+	}
+
+	img {
+		width: 100%;
+		display: block;
+	}
+
+	h1,h2,h3,h4 {
+		letter-spacing: var(--letter-spacing);
+		text-transform: capitalize;
+		line-height: 1.25;
+		margin-bottom: 0.75rem;
+	}
+
+	h1 {
+		font-size: 3rem;
+	}
+
+	h2 {
+		font-size: 2rem;
+	}
+
+	h3 {
+		font-size: 1.5rem;
+	}
+
+	h4 {
+		font-size: 0.875rem;
+	}
+
+	p {
+		margin-bottom: 1.25rem;
+	}
+
+	.btn {
+		padding: 0.5rem 1rem;
+		margin: 1.25rem 0;
+		color: var(--color-white);
+		background: var(--primary-color);
+		font-size: 0.875rem;
+		display: inline-block;
+		letter-spacing: var(--letter-spacing);
+		text-transform: uppercase; 
+		transition: --var(transition);
+
+		&.btn-outline {
+			outline: 0.1rem solid var(--primary-color);
+			outline-offset: 0.25rem;
+		}
+
+		&.btn-large {
+			padding: 1rem 2rem;
+		}
+
+		&:hover {
+			background: var(--primary-light-color);
+			color: var(--primary-color);
+		}
+	}
+
+	.clearfix {
+		&::before,
+		&::after {
+			content: "";
+			clear: both;
+			display: table;
+		}
+	}
+
+	.section-center {
+		padding: 4rem 0;
+		width: 90vw;
+		margin: 0 auto;
+		max-width: 1200px;
+
+		@media screen and (min-width: 990px) {
+			width: 95vw;
+			padding: 4rem 1rem;
+		}
+	}
+
+	.section-title {
+		margin-bottom: 2rem;
+
+		h3 {
+			font-family: var(--font-family-secondary);
+			color: var(--primary-color);
+		}
+	}
+}

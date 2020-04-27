@@ -1,0 +1,63 @@
+.services {
+	.section-title {
+		text-align: center;
+	}
+
+	.service {
+		&-card {
+			background: var(--color-grey-light);
+			margin: 1rem 0;
+			text-align: center;
+			float: left;
+			width: 100%;
+			margin: 10px 1%;
+
+			&:hover {
+				box-shadow: 0 0.35rem 0.2rem var(--color-grey-light);
+			}
+
+			@media screen and (min-width: 1200px) {
+				width: 30%;
+			}
+		}
+
+		&-description {
+			p {
+				max-width: 20rem;
+				margin: 0 auto;
+			}
+
+			.btn-service {
+				border-radius: 10px;
+			}
+		}
+
+		&-icon {
+			height: 75px;
+			width: 75px;
+			display: inline-block;
+			background: var(--primary-color);
+			border: 0.25rem solid var(--color-grey-light);
+			border-radius: 50%;
+			transform: translateY(-35px);
+
+			i {
+				display: inline-block;
+				font-size: 2rem;
+				color: var(--primary-light-color);
+				line-height: 2;
+			}
+		}
+
+		&-image-container {
+			border-top-left-radius: 0.25rem;
+			border-top-right-radius: 0.25rem;
+
+			img {
+				max-height: 20rem;
+				object-fit: cover;
+				object-position: left center;
+			}
+		}
+	}
+}
